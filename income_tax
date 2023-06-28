@@ -1,0 +1,34 @@
+package income_tax;
+import java.util.Scanner;
+public class it
+{
+public static void main(String[] args)
+{
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter your Name: ");
+    String Name = scanner.nextLine();
+    System.out.print("Enter your salary: ");
+    int earnings = scanner.nextInt();
+
+    System.out.println("Name: " +Name);
+    System.out.println("earnings: " +earnings);
+    scanner.close();
+    if(earnings<=50000)
+    {
+    	System.out.println("NO tax");
+    }
+    if(earnings>=50000 && earnings<=60000)
+    {
+    	double g=0.1*earnings;
+    			
+    	System.out.println("the tax will be:" +g);
+    }
+    if(earnings>60000 && earnings<=150000)
+    {
+    	double f=0.2*earnings;
+    	System.out.println("the tax will be:" +f);
+    }
+    
+}
+}
